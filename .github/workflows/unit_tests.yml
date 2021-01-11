@@ -33,11 +33,11 @@ jobs:
         tox
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v1.2.1
       with:
         file: coverage.xml
         flags: unittests
-        name: codecov-navmazing-${{ matrix.python-version }}
+        name: ${{ matrix.python-version }}
 
   platform:
     # Check package properly install on different platform (dev setup)
